@@ -1,71 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General page styling */
 body {
-    background: #0db9d7;
     font-family: Arial, sans-serif;
+    background-color: midnightblue;  
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.container {
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-}
-
-.cell {
-    background: rgb(225, 204, 13);
-    border: 2px solid #333;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.cell:hover {
-    background: #eee;
-}
-
-#statusText {
-    margin: 15px 0;
-    font-weight: bold;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #333;
+    margin: 0;
     color: white;
+  }
+  
+  /* Container box */
+  .container {
+    background-color: navy;  
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0px 6px 20px black;
+  }
+  
+  /* Title */
+  h1 {
+    margin-bottom: 25px;
+    color: lime;  
+    font-size: 2.5rem;  /* Bigger title */
+  }
+  
+  /* Game board */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px); /* increased from 100px */
+    grid-template-rows: repeat(3, 120px);    /* increased from 100px */
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  /* Each cell */
+  .cell {
+    width: 120px;
+    height: 120px;
+    background-color: steelblue;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;  /* Bigger X and O */
     cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #555;
-}
-
-@media (max-width: 500px) {
-    .cell {
-        height: 80px;
-        font-size: 2rem;
-    }
-}
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+  }
+  
+  .cell:hover {
+    transform: scale(1.08);
+    background-color: royalblue; 
+  }
+  
+  /* Status text */
+  #statusText {
+    font-size: 1.5rem; /* Bigger text */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Reset button */
+  #resetBtn {
+    padding: 12px 25px;
+    background-color: lime; 
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;  /* Bigger button text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #resetBtn:hover {
+    background-color: greenyellow; 
+  }
+  
